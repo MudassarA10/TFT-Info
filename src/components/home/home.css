@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    /* background-color: white */
+
+}
+
+body {
+    background-color: rgb(43, 42, 42);
+}
+
+.main-box {
+    width: 90%;
+    margin: 0 auto;
+
+
+
+}
+
+.header {
+    width: 100%;
+
+
+}
+
+.hero-sec {
+    width: 100%;
+    margin-top: 80px;
+    height: 500px;
+    display: flex;
+
+}
+
+.sidebar-btn {
+    width: 25%;
+    height: 500px;
+
+}
+
+.card-data {
+    padding-top: 20px;
+    width: 75%;
+
+
+}

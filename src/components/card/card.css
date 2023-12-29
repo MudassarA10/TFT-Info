@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.card-main {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card {
+    /* width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: white;
+    background-color: rgba(117, 111, 111, 0.685);
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 20px; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: white;
+    background-color: rgba(117, 111, 111, 0.685);
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 20px;
+    height: fit-content;
+    /* overflow-y: scroll; */
+    /* Add this line */
+}
+
+.card-box1 {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.button {
+    border-radius: 20px;
+    /* padding: 0 10px; */
+    width: 80px;
+    height: 40px;
+    /* padding: 0px 30px; */
+    margin: 0 5px;
+    color: white;
+    background-color: gray;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* font-weight: bold; */
+    border: unset;
+    font-size: large;
+}
+
+.like-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    padding: 10px;
+}
+
+/* Add these styles for each piece of content */
+.text {
+    word-wrap: break-word;
+    /* overflow: hidden; */
+    text-overflow: ellipsis;
+    padding: 10px;
+    /* display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; */
+}
+
+.url,
+.category {
+    padding: 10px;
+
+
+    background: transparent;
+}
+
+.url {
+    margin-top: 20px;
+    background: transparent;
+}
+
+.btn-cata {
+    border-radius: 20px;
+    padding: 0 10px;
+    height: 30px;
+
+    width: fit-content;
+    border: unset;
+    background-color: greenyellow;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .card-main,
+    .card-box1 {
+        align-items: center;
+    }
+
+    .url {
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .card {
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .card-main {
+        margin: 0 auto;
+        max-width: 800px;
+    }
+}
+
+/* Add more media queries as needed for larger screens */
