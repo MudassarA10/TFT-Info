@@ -94,6 +94,8 @@
     color: white;
     font-size: 20px;
     border: unset;
+    cursor: text !important;
+    caret-color: white !important;
 }
 
 .input2 {
@@ -105,6 +107,8 @@
     color: white;
     font-size: 20px;
     border: unset;
+    cursor: text !important;
+    caret-color: white !important;
 }
 
 .character-counter {
@@ -114,7 +118,7 @@
     align-items: center;
     background-color: gray;
     border-radius: 20px;
-    margin: 0 5px;
+    margin: 0 px;
     height: 30px;
 }
 
