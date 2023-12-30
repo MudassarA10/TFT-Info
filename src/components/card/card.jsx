@@ -52,24 +52,28 @@ const CardDisplay = (props) => {
     return (
         <div className='card-main'>
             {cards.slice(0, displayedCards).map((card, index) => (
-                <div key={index} className='card'>
-                    <div className='card-box1'>
-                        <div className='text'> <p>{card.name}</p></div>
-                        <div className='url'> <p>({card.url})</p></div>
-                        <div className='catagory'><button className='btn-cata'>{card.category}</button></div>
+                <div key={index} className='mainSec'>
+                    <div className='card_content'>
+                        <div className='card_content'>
+                            <p  >{card.name} <span>({card.url})</span></p>
+                            {/* <p className='card'>({card.url})</p> */}
+                        </div>
+                        <div className='card_content_btn'><button className='btn'>{card.category}</button></div>
                     </div>
 
-                    <div className='like-btn'>
-                        <button className='button' onClick={() => handleCount(index, 'like', card, 'like')}>
+                    <div className='card_btn'>
+                        <div> <button className='btn_counter' onClick={() => handleCount(index, 'like', card, 'like')}>
                             👍{card.like}
-                        </button>
-                        <button className='button' onClick={() => handleCount(index, 'average', card, 'average')}>
-                            😒{card.average}
-                        </button>
-                        <button className='button' onClick={() => handleCount(index, 'dispute', card, 'dispute')}>
+                        </button></div>
+                        <div>
+                            <button className='btn_counter' onClick={() => handleCount(index, 'average', card, 'average')}>
+                                😒{card.average}
+                            </button>
+                        </div>
+                        <div><button className='btn_counter' onClick={() => handleCount(index, 'dispute', card, 'dispute')}>
                             😡{card.dispute}
-                        </button>
-                        {counts[index].dispute >= 10 && <p>This info is disputed!</p>}
+                        </button></div>
+                        {/* {counts[index].dispute >= 10 && <p>This info is disputed!</p>} */}
                     </div>
                 </div>
             ))}

@@ -1,169 +1,256 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
+ /* Your existing code */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
 
-    color: white;
-    font-weight: bolder;
-}
+ body {
+     background-color: #66da7f;
+ }
 
-.logo {
-    display: flex;
-    gap: 10px;
-    height: 40px;
-    margin-left: 20px;
-    /* Adjusted margin for smaller screens */
-    align-items: center;
-}
+ .header {
+     display: flex;
+     justify-content: space-between;
+     padding: 10px;
+     color: white;
+     font-weight: bolder;
+ }
 
-.btn {
-    cursor: pointer;
-    padding: 10px 20px;
-    border-radius: 30px;
-    border: unset;
-    background-image: linear-gradient(120deg,
-            #13e0e3 0%,
-            #eb3a4c 24%,
-            #66da7f 49%,
-            #dfe328 75%,
-            #b0d421 100%);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: large;
-    font-weight: bold;
-}
+ .logo {
+     display: flex;
+     gap: 10px;
+     height: 40px;
+     margin-left: 20px;
+     align-items: center;
+ }
 
-.btn1 {
-    cursor: pointer;
-    padding: 10px 20px;
-    border-radius: 30px;
-    border: unset;
-    background-image: linear-gradient(120deg,
-            #13e0e3 0%,
-            #eb3a4c 24%,
-            #66da7f 49%,
-            #dfe328 75%,
-            #b0d421 100%);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: large;
-    font-weight: bold;
-    margin-left: 20px;
-}
+ .btn {
+     cursor: pointer;
+     padding: 10px 20px;
+     border-radius: 30px;
+     border: unset;
+     background-image: linear-gradient(120deg, #13e0e3 0%, #eb3a4c 24%, #66da7f 49%, #dfe328 75%, #b0d421 100%);
+     color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: large;
+     font-weight: bold;
+ }
+
+ .btn1 {
+     cursor: pointer;
+     padding: 10px 20px;
+     border-radius: 30px;
+     border: unset;
+     background-image: linear-gradient(120deg, #13e0e3 0%, #eb3a4c 24%, #66da7f 49%, #dfe328 75%, #b0d421 100%);
+     color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: large;
+     font-weight: bold;
+     margin-left: 20px;
+ }
+
+ .overlay {
+     position: absolute;
+     margin-top: 50px;
+     width: 87%;
+     height: 60px;
+     display: flex;
+     align-items: flex-end;
+     /* padding: 20px; */
+
+ }
+
+ .component {
+     background-color: rgba(117, 111, 111, 0.685);
+     padding: 20px;
+     z-index: 1;
+     width: 100%;
+     display: flex;
+     gap: 10px;
+
+     border-radius: 20px;
+     font-size: 20px;
+     height: 100%;
+     align-items: center;
+ }
+
+ .input1 {
+     width: 40%;
+     height: 30px;
+     border-radius: 20px;
+     padding: 10px;
+     background-color: gray;
+     color: white;
+     font-size: 20px;
+     border: unset;
+
+ }
+
+ .input2 {
+     width: 20%;
+     height: 30px;
+     border-radius: 20px;
+     padding: 10px;
+     background-color: gray;
+     color: white;
+     font-size: 20px;
+     border: unset;
+
+ }
+
+ .character-counter {
+     width: 5%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: gray;
+     border-radius: 20px;
+     margin: 0 px;
+     height: 30px;
+ }
+
+ .drop-down {
+     width: 15%;
+     border-radius: 20px;
+     color: white;
+     font-size: 15px;
+     font-weight: 200;
+     background-color: gray;
+     margin-left: 20px;
+     padding: 0 10px;
+     border: unset;
+     height: 30px;
+ }
+
+ /* Media Queries for Responsive Design */
+ @media screen and (max-width: 768px) {
+     .logo {
+         margin-left: 10px;
+         font-size: 10px;
+     }
+
+     .btn {
+         padding: 8px 16px;
+         font-size: 20px;
+         font-weight: 400;
+         display: flex;
+         flex-direction: column;
+     }
+ }
+
+ @media screen and (max-width: 490px) {
+     .header {
+         align-items: center;
+         text-align: center;
+     }
+
+     .logo {
+         margin-left: 0;
+         margin-bottom: 10px;
+     }
+
+     .overlay {
+         margin-top: 350px;
+         padding: 10px;
+         width: 90%;
+
+     }
+
+     .component {
+         height: 150px;
+         display: flex;
+         flex-direction: column;
+         margin-top: 10px;
+         margin-right: 20px;
+         border-radius: 10px;
+         gap: 5px;
+         padding: 5px;
+
+     }
+
+     .input1 {
+         width: 100%;
+         height: 25px;
+         border-radius: 15px;
+
+         font-size: 15px;
 
 
-.overlay {
-    position: absolute;
-    margin-top: 100px;
-    width: 85%;
-    height: 5%;
-    display: flex;
-    align-items: flex-end;
-    margin-right: 300px;
+     }
 
-}
+     .input2 {
+         width: 100%;
+         height: 25px;
+         border-radius: 15px;
 
-.component {
-    /* Styling for the component that appears when the button is clicked */
-    background-color: rgba(117, 111, 111, 0.685);
-    padding: 20px;
-    z-index: 1;
-    width: 100%;
-    display: flex;
-    margin-top: 80px;
-    border-radius: 20px;
-    font-size: 20px;
-
-    height: 60px;
-    /* justify-content: center; */
-    align-items: center;
-
-    /* Ensure the component is above the overlay */
-}
-
-.input1 {
-    width: 40%;
-    height: 30px;
-    border-radius: 20px;
-    padding: 10px;
-    background-color: gray;
-    color: white;
-    font-size: 20px;
-    border: unset;
-    cursor: text !important;
-    caret-color: white !important;
-}
-
-.input2 {
-    width: 20%;
-    height: 30px;
-    border-radius: 20px;
-    padding: 10px;
-    background-color: gray;
-    color: white;
-    font-size: 20px;
-    border: unset;
-    cursor: text !important;
-    caret-color: white !important;
-}
-
-.character-counter {
-    width: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-    border-radius: 20px;
-    margin: 0 px;
-    height: 30px;
-}
-
-.drop-down {
-    width: 15%;
-    border-radius: 20px;
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    background-color: gray;
-    margin-left: 20px;
-    padding: 0 10px;
-
-    border: unset;
-
-    height: 30px;
-}
-
-/* Media Queries for Responsive Design */
-@media screen and (max-width: 768px) {
-    .logo {
-        margin-left: 10px;
-        /* Adjusted margin for smaller screens */
-    }
-
-    .btn {
-        padding: 8px 16px;
+         font-size: 15px;
 
 
-    }
-}
+     }
+
+     .character-counter {
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: flex-end;
+
+         background-color: gray;
+         border-radius: 20px;
+         margin: 0 px;
+         height: 25px;
+     }
+
+     .drop-down {
+         width: 100%;
+         border-radius: 15px;
+         color: white;
+         font-size: 15px;
+
+         height: 30px;
+         margin-right: 20px;
+     }
+
+     .btn1 {
+
+         width: 100%;
+         border-radius: 20px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         font-size: 15px;
+         font-weight: 100;
+         height: 25px;
+
+         margin-left: 0px;
+
+     }
+
+     .logo {
+         display: flex;
+         gap: 6px;
+         height: 35px;
+         font-size: 7px;
+         margin-left: 15px;
+         align-items: center;
+
+     }
+
+     .btn {
 
 
-@media screen and (max-width: 480px) {
-    .header {
-        flex-direction: column;
-        /* Stack items vertically on smaller screens */
-        align-items: center;
-        text-align: center;
-    }
+         border-radius: 15px;
 
-    .logo {
-        margin-left: 0;
-        /* No margin on smaller screens */
-        margin-bottom: 10px;
-        /* Add some space below the logo on smaller screens */
-    }
-}
+         justify-content: center;
+         align-items: center;
+         font-size: 15px;
+         font-weight: 100;
+         height: 40px;
+     }
+
+
+ }

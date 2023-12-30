@@ -64,7 +64,7 @@ const Header = () => {
     return (
         <div className="header">
             <div className="logo">
-                <MessageIcon sx={{ fontSize: 40 }} />
+                <MessageIcon sx={{ fontSize: 30 }} />
                 <h1>Today I Learned</h1>
             </div>
             <div className="btn" onClick={handleBtnClick}>
