@@ -67,6 +67,10 @@
     border: unset;
 }
 
+.red-background {
+    background-color: red;
+}
+
 @media (max-width:992px) {
     .mainSec {
         grid-template-columns: 1fr;

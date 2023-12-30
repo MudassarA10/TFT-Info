@@ -17,8 +17,14 @@ const CardDisplay = (props) => {
                 ? storedData.filter((item) => item.category === label)
                 : storedData;
 
-            setCards(filteredData);
-            setCounts(filteredData.map(() => ({ like: 0, average: 0, dispute: 0 })));
+            //         setCards(filteredData);
+            //         setCounts(filteredData.map(() => ({ like: 0, average: 0, dispute: 0 })));
+            //     }
+            // }, [dependecy, props.label, localStorage.getItem('data')]);
+            const sortedCards = filteredData.slice().sort((a, b) => b.like - a.like);
+
+            setCards(sortedCards);
+            setCounts(sortedCards.map(() => ({ like: 0, average: 0, dispute: 0 })));
         }
     }, [dependecy, props.label, localStorage.getItem('data')]);
 
@@ -56,7 +62,7 @@ const CardDisplay = (props) => {
                     <div className='card_content'>
                         <div className='card_content'>
                             <p  >{card.name} <span>({card.url})</span></p>
-                            {/* <p className='card'>({card.url})</p> */}
+
                         </div>
                         <div className='card_content_btn'><button className='btn'>{card.category}</button></div>
                     </div>
